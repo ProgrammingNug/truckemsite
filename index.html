@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Trucker</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="=width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	
+	<body>
+
+<!----------HEADER---->		
+		
+		<header>
+			<div id="logo">
+				<a href='#home'>
+					<img src="img/rsz_logo-min.png" alt="logo">	
+				</a>
+		</div>
+
+<nav id="main-nav">
+	<div class="hamburger"  onclick="myFunction(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+		<ul id ="menu">
+		<a href="#home"><li>HOME</li></a>
+		<a href="#about"><li>ABOUT</li></a>
+		<a href="#work"><li>WORK</li></a>
+		<a href="#contact"><li>CONTACT</li></a>
+	</ul>
+</nav>
+</header>
+
+<!--------HOME---->
+
+<section id="home">
+	<hr>
+	<h1>TRUCKER</h1>
+	<h2>you know who to rely on.</h2>
+	<a href="#about">
+		<img src="img/rsz_scroll-min.png" alt="file">
+	</a>
+
+</section>
+
+<!----------ABOUT---->
+
+<section id="about">
+	<h3>About</h3>
+	<hr>
+	<img src="img/businessman.png" alt="Portrait">
+	<h4>Trucker</h4>
+	<p>Trucker is Europe's one of the best truck company that you can rely on, we deliver products and all kinds of stuff across the europe with understanding speed.</p>	
+</section>
+
+<!---------WORK---->
+
+<section id="work">
+	<h3>Work</h3>
+	<hr>
+	<div id="projects">
+		<ul>
+			<li>
+				<a href="https://placeholder.com"><img src="https://via.placeholder.com/1280x720"></a>
+			</li>
+
+			<li>
+				<a href="https://placeholder.com"><img src="https://via.placeholder.com/1280x720"></a>
+			</li>	
+		</ul>
+	</div>
+</section>
+
+<!----------CONTACT---->
+
+<section id="contact">
+	<h3>Contact</h3>
+	<hr>
+
+	<form>
+		<input class=input_text type="email" tabindex="1" placeholder="E-mail"><br>
+		<input class=input_text type="text" tabindex="2" placeholder="Subject"><br>
+		<textarea class=input_text tabindex="3" placeholder="Message"></textarea><br>
+		<input class="button" type="submit">
+	</form>
+</section>
+
+<!--<div class="copy">
+	Tasty Nug 2018
+</div>
+-->
+
+
+<script  src="https://code.jquery.com/jquery-1.12.4.min.js"integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="crossorigin="anonymous"></script>
+<script	src="js/mobile-menu.js"></script>
+
+
+
+<script>function myFunction(x) {
+    x.classList.toggle("change");
+    document.getElementById("menu").classList.toggle("change");
+}
+</script>
+	</body>
+
+
+	</html>
