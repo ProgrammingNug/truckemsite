@@ -173,23 +173,28 @@ form textarea {
 	background-attachment: fixed;
 }
 
-.input_text {
-	color: #494949;
-	padding:10px;
+.allcont {
+	width: 80%;
+	margin: 4% 10% 5% 10%;
 }
 
-.button {
-	background-color: #f0f0f0;
-	color: #494949;
-	width: 566px;
-	height:50px;
+.allcont img {
+	width: 100%;
 }
 
-.button:hover {
-	background-color: #494949;
-	color: #f0f0f0;
 
+p.new {
+	width: 100%;
+	position: relative;
+	margin-top: -30%;
 }
+
+p.new {
+	text-align: center;
+	color: white;
+	font-size: 30px;
+}
+
 
 /* ---MEDIA QUERIES---*/
 
