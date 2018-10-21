@@ -1,95 +1,92 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Trucker</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="=width=device-width, initial-scale=1">
-		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="style.css">
-	</head>
-	
-	<body>
+<head>
+    <title>Truckem.cz</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="=width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 
-<!----------HEADER---->		
-		
-		<header>
-			<div id="logo">
-				<a href='#home'>
-					<img src="img/rsz_logo-min.png" alt="logo">	
-				</a>
-		</div>
+<body>
 
-<nav id="main-nav">
-	<div class="hamburger"  onclick="myFunction(this)">
-  <div class="bar1"></div>
-  <div class="bar2"></div>
-  <div class="bar3"></div>
-</div>
-		<ul id ="menu">
-		<a href="#home"><li>HOME</li></a>
-		<a href="#about"><li>ABOUT</li></a>
-		<a href="#work"><li>WORK</li></a>
-		<a href="#contact"><li>CONTACT</li></a>
-	</ul>
-</nav>
+<!----------HEADER---->
+
+<header>
+    <h1>
+        <a href='/' class="logo">Truckem.cz</a>
+    </h1>
+
+    <nav class="main-nav">
+        <div id="menu-toggle" class="hamburger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <ul id="menu-change" class="menu">
+            <li id="home-link"><a href="#home">domů</a></li>
+            <li id="about-link"><a href="#about">o nás</a></li>
+            <li id="work-link"><a href="#work">naše auta</a></li>
+            <li id="contact-link"><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
 </header>
 
 <!--------HOME---->
 
 <section id="home">
-	<hr>
-	<h1>TRUCKER</h1>
-	<h2>you know who to rely on.</h2>
-	<a href="#about">
-		<img src="img/rsz_scroll-min.png" alt="file">
-	</a>
+    <h1 id="home-title">Truckem.cz</h1>
+    <h2>International transport</h2>
+    <a href="#about">
+        <img src="img/scroll.png" alt="file">
+    </a>
 
 </section>
 
 <!----------ABOUT---->
 
 <section id="about">
-	<h3>About</h3>
-	<hr>
-	<img src="img/businessman.png" alt="Portrait">
-	<h4>Trucker</h4>
-	<p>Trucker is Europe's one of the best truck company that you can rely on, we deliver products and all kinds of stuff across the europe with understanding speed.</p>	
+    <h3 id="about-title">O nás</h3>
+    <hr>
+    <img src="img/businessman.png" alt="Portrait">
+    <h4>Truckem.cz</h4>
+    <p>Truckem.cz is Europe's one of the best truck company that you can rely on, we deliver products and all kinds of
+        stuff across the europe with understanding speed.</p>
 </section>
 
 <!---------WORK---->
 
 <section id="work">
-	<h3>Work</h3>
-	<hr>
-	<div id="projects">
-		<ul>
-			<li>
-				<a href="https://placeholder.com"><img src="https://via.placeholder.com/1280x720"></a>
-			</li>
+    <h3 id="work-title">Naše auta</h3>
+    <hr>
+    <div id="projects">
+        <ul>
+            <li>
+                <a href="https://placeholder.com"><img src="https://via.placeholder.com/1280x720"></a>
+            </li>
 
-			<li>
-				<a href="https://placeholder.com"><img src="https://via.placeholder.com/1280x720"></a>
-			</li>	
-		</ul>
-	</div>
+            <li>
+                <a href="https://placeholder.com"><img src="https://via.placeholder.com/1280x720"></a>
+            </li>
+        </ul>
+    </div>
 </section>
 
 <!----------CONTACT---->
 
 <section id="contact">
-	<h3>Contact</h3>
-	<hr>
-		<div class="allcont">
-		<img src="img/square.png" height="600px">
-			<p class="new">
-			contact number: 123 123 123
-			<br>
-			contact email: 123123@123123
-			<br>
-			adress: 123 123
-			</p>
-	</div>
+    <h3 id="contact-title">Kontakt</h3>
+    <hr>
+    <div class="allcont">
+        <p class="new">
+            phone: 123 123 123
+            <br>
+            email: 123123@123123
+            <br>
+            adress: 123 123
+        </p>
+    </div>
 </section>
 
 <!--<div class="copy">
@@ -98,17 +95,96 @@
 -->
 
 
-<script  src="https://code.jquery.com/jquery-1.12.4.min.js"integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="crossorigin="anonymous"></script>
-<script	src="js/mobile-menu.js"></script>
+<script>
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+        this.classList.toggle("change");
+        document.getElementById("menu-change").classList.toggle("change");
+    });
 
+    document.getElementById("menu-change").addEventListener("click", function () {
+        this.classList.toggle("change");
+        document.getElementById("menu-toggle").classList.toggle("change");
+    });
 
+    function isAnyPartOfElementInViewport(el) {
 
-<script>function myFunction(x) {
-    x.classList.toggle("change");
-    document.getElementById("menu").classList.toggle("change");
-}
+        var rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    var hashes = [
+        '#home',
+        '#about',
+        '#work',
+        '#contact',
+    ];
+
+    var sections = [
+        'home',
+        'about',
+        'work',
+        'contact',
+    ];
+
+    var titles = [
+        document.getElementById('home-title'),
+        document.getElementById('about-title'),
+        document.getElementById('work-title'),
+        document.getElementById('contact-title'),
+    ];
+
+    var links = [
+        document.getElementById('home-link'),
+        document.getElementById('about-link'),
+        document.getElementById('work-link'),
+        document.getElementById('contact-link'),
+    ];
+
+    var oldIndex = null;
+
+    function onScroll() {
+        const titleIndex = titles.findIndex(isAnyPartOfElementInViewport);
+        if (titleIndex > -1 && oldIndex !== titleIndex) {
+            oldIndex = titleIndex;
+            links.forEach(function (element, index) {
+                if (index === titleIndex) {
+                    element.classList.add('active');
+                } else {
+                    element.classList.remove('active');
+                }
+            });
+        }
+    }
+
+    var timeout;
+    window.addEventListener('scroll', function () {
+        if (timeout) {
+            window.cancelAnimationFrame(timeout);
+        }
+        timeout = window.requestAnimationFrame(onScroll);
+    }, false);
+
+    function onLoad() {
+        onScroll();
+
+        if (window.location.hash) {
+            var index = hashes.findIndex(function (hash) {
+                return hash === window.location.hash
+            });
+            if (index > -1) {
+                document.getElementById(sections[index]).scrollIntoView();
+            }
+        }
+    }
+
+    window.addEventListener('load', onLoad, false);
 </script>
-	</body>
+</body>
 
 
-	</html>
+</html>
